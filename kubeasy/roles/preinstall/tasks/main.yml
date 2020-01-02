@@ -1,0 +1,20 @@
+# 安装工具组件
+
+#- import_tasks: utils.yml
+#  when: 'ansible_distribution in ["CentOS","RedHat"]' 
+
+
+# 安装系统基础软件环境
+
+- import_tasks: centos_software.yml
+  when: 'ansible_distribution in ["CentOS","RedHat"]' 
+
+# 公共系统参数设置
+- import_tasks: centos_common.yml
+  when: 'ansible_distribution in ["CentOS","RedHat"]' 
+
+
+# k8s安装前的准备
+#- import_tasks: k8s_preinstall.yml
+#  when: 'ansible_distribution in ["CentOS","RedHat"]' 
+  

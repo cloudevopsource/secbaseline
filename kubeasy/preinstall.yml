@@ -1,0 +1,7 @@
+# [optional] to synchronize system time of nodes with 'chrony' 
+# prepare tasks for all nodes
+- hosts:
+  - kube-master
+  - kube-node
+  roles:
+  - preinstall
